@@ -2,34 +2,38 @@
     /* ===== Colors ===== */
     --text-color : #000;
     --text-color-light : #5e5e5e;
-    /* ===== +색상 더 추가하기 ===== */
-    
+    --text-color-white : #fff;
     --container-color : #fff;
+    --nav-gray-color : #cdcdcd;
+    --nav-btn-color : #eb5a00;
+    --box-background-color : #dfdfdf;
 
     /* ===== Font & Font Size ===== */
     --body-font : 'Noto Sans KR', sans-serif;
     --small-font-size : .75rem; /* 12px */
     --middle-font-size : 0.938rem; /* 15px */
+    --bgmiddle-font-size : 1.25rem; /* 20px */
     --big-font-size : 1.5rem; /* 24px */
+    --md-big-font-size : 3rem;
+    --sm-big-font-size : 5rem; /* 80pxpx */
+    --mr-big-font-size : 8rem; /* 128px */
 
     /* ===== Font Weight ===== */
     --font-medium : 500;
     --font-bold : 700;
+    --mr-font-bold : 900;
 
     /* ===== Z-index ===== */
     z-index: 100;
 }
 a {
     text-decoration: none;
+    color: var(--text-color);
 }
 
 /* ===== Initial Setting ===== */
 *, ::before, ::after {
     box-sizing: border-box;
-}
-
-a {
-    text-decoration: none;
 }
 
 ul,li {
@@ -41,11 +45,157 @@ body {
     padding: 0;
     font: var(--body-font);
     font-size: var(--middle-font-size);
-    color: var(--text-color);
 }
 
 /* ===== Header ===== */
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 8rem;
+}
+
+.header__title_logo {
+    text-transform: uppercase;
+    font-weight: var(--font-bold);
+    font-size: var(--big-font-size);
+}
+
+.header__title_menu {
+    font-size: var(--middle-font-size);
+    margin: 0rem 1rem;
+    font-weight: var(--font-bold);
+    transition: .3s;
+}
+
+.header__title_menu i {
+    font-size: var(--bgmiddle-font-size);
+}
+
+.header__menu a:first-child {
+    color: var(--nav-btn-color);
+}
+
+.header__menu a:hover {
+    color: var(--nav-btn-color);
+    transition: .3s;
+}
+
 /* ===== Nav ===== */
+nav.nav {
+    background-color: var(--nav-gray-color);
+}
+
+.nav__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15rem;
+}
+
+.nav__text {
+    display: flex;
+    flex-direction: column;
+}
+.nav__img {
+    display: flex;
+
+}
+.nav__img_home {
+    width: 500px;
+}
+
+.nav__text_title {
+    font-size: var(--mr-big-font-size);
+    font-weight: var(--mr-font-bold);
+    letter-spacing: 2rem;
+}
+
+.nav__text_sub_title {
+    font-size: var(--sm-big-font-size);
+    font-weight: var(--font-medium);
+    letter-spacing: 2rem;
+}
+
+.nav__text_Btn {
+    width: 150px;
+    height: 60px;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    background-color: var(--nav-btn-color);
+    color: var(--text-color-white);
+    font-weight: var(--font-bold);
+    margin-top: 3rem;
+    cursor: pointer;
+    opacity: .8;
+    transition: .3s;
+}
+
+.nav__text_Btn:hover {
+    opacity: 1;
+    transition: .3s;
+}
 /* ===== Section ===== */
+.section__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+.section__box_men,
+.section__box_women {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--box-background-color);
+    padding: 1rem 2rem 0;
+    margin: 1rem;
+    transition: .3s;
+}
+
+.section__men_img,
+.section__women_img {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+.section__men_img img,
+.section__women_img img {
+    max-height: 250px;
+}
+
+.section__span_sub {
+    color: var(--text-color-light);
+    font-size: var(--big-font-size);
+    letter-spacing: .2rem;
+    font-weight: var(--font-medium);
+}
+
+.section__span_title {
+    font-size: var(--md-big-font-size);
+    letter-spacing: .3rem;
+    font-weight: var(--font-bold);
+}
+
+.section__span_view {
+    margin-top: 2rem;
+}
+
+.section__span_view a {
+    color: #989898;
+}
+
+.section_span_view a:hover {
+    text-decoration: underline;
+}
+
+.section__box_men:hover,
+.section__box_women:hover {
+    transform: translateY(-5px);
+    transition: .3s;
+}
+
 /* ===== Aside ===== */
 /* ===== Footer ===== */
