@@ -7,6 +7,7 @@
     --nav-gray-color : #cdcdcd;
     --nav-btn-color : #eb5a00;
     --box-background-color : #dfdfdf;
+    --aside-box-background : #f2f2f2;
 
     /* ===== Font & Font Size ===== */
     --body-font : 'Noto Sans KR', sans-serif;
@@ -14,6 +15,7 @@
     --middle-font-size : 0.938rem; /* 15px */
     --bgmiddle-font-size : 1.25rem; /* 20px */
     --big-font-size : 1.5rem; /* 24px */
+    --etc-font-size : 2.2rem;
     --md-big-font-size : 3rem;
     --sm-big-font-size : 5rem; /* 80pxpx */
     --mr-big-font-size : 8rem; /* 128px */
@@ -198,4 +200,45 @@ nav.nav {
 }
 
 /* ===== Aside ===== */
+aside.aside {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+a.aside__title {
+    font-size: var(--etc-font-size);
+    font-weight: var(--font-bold);
+}
+
+p.aside__p_view a {
+    color: var(--text-color-light);
+}
+
+.aside__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0 5rem;
+}
+
+.aside__product img {
+    margin-top: 1rem;
+    max-height: 400px;
+    background-color: var(--aside-box-background);
+}
+
+.aside__product_img .new_name {
+    display: flex;
+}
+
+.aside__product_name {
+    font-weight: bold;
+    font-size: var(--bgmiddle-font-size);
+}
+
+.aside__product_price {
+    font-size: var(--middle-font-size);
+    color: var(--text-color-light);
+    font-weight: bold;
+}
+
 /* ===== Footer ===== */
