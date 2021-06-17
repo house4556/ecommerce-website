@@ -19,6 +19,9 @@
     /* ===== Z-index ===== */
     z-index: 100;
 }
+a {
+    text-decoration: none;
+}
 
 /* ===== Initial Setting ===== */
 *, ::before, ::after {
